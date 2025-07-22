@@ -1,0 +1,26 @@
+{"model": {
+        "base_model_path": "/media/jyh/09e3ad80-13b7-403c-907b-75fe5213b4d4/Ycx/llama-7b",
+        "tallrec_adapter_path": "/media/jyh/09e3ad80-13b7-403c-907b-75fe5213b4d4/Ycx/multi_finetune_model_42_16",
+        "item_embedding_path": "./data/item_embedding.pt",
+        "load_in_8bit": true,
+        "batch_size": 32,
+        "temperature": 0.7,
+        "max_length": 256
+    },
+    "data": {
+        "item_names_file": "data/movies.dat",
+        "train_data_path": "data/train.json",
+        "test_data_path": "data/test.json"
+        
+    },
+    "fusion": {
+        "fusion_method": "weighted",
+        "optimal_alpha": 0.6,
+        "decision_threshold": 0.5
+        
+    },
+    "training": {
+        "seed": 42,
+        "batch_size": 32
+    }
+}
